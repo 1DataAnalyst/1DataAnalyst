@@ -1,0 +1,34 @@
+name: Greetings
+
+on: [pull_request_target, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 🎉 Welcome aboard! 🚀
+
+Hey there! You've just encountered your first issue. Don't worry, it's not a problem – it's an opportunity! Our team is here to assist you every step of the way.
+
+If you need help or have any questions, feel free to reach out. We're excited to have you on board, and together, we'll tackle challenges and make things happen!
+
+Happy coding! 💻✨
+
+        pr-message: 🚀 Congratulations on your First Pull Request! 
+
+Awesome job! You've just made your first contribution to [DataAnalyst Repository]. 🎉 Thank you for taking the initiative to enhance our project.
+
+Before we merge, please ensure the following:
+- Your changes align with our project's guidelines.
+- You've added appropriate tests if applicable.
+- Resolve any feedback from code reviews promptly.
+
+Remember, we're here to help. If you have any questions or need guidance, feel free to ask. Your dedication to quality contributes to the success of our open-source community.
+
+Happy coding and looking forward to more of your contributions! 🌟
